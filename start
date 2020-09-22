@@ -36,17 +36,21 @@ variable "machine_type" {
   default = "n1-standard-1"
 }
 ' > variables.tf
-
+                terraform init 
+                terraform plan 
+                terraform apply 
 
                                 
 			shift 
                         ;;
                 DESTROY)
                        echo "Destroy"
+                        terraform destroy
 			shift
                        ;;
                 OUTPUT)
                         echo "Output"
+                        kubectl get all 
 			shift
                         ;;
                 -help) 
