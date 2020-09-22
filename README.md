@@ -23,21 +23,21 @@ Crear un script bash o makefile, que acepte parámetros (CREATE, DESTROY y OUTPU
 
 Ejemplos: 
 
-Para crear cluster 
+_Para crear cluster_ 
 
-./start CREATE archivo_del_proyecto1122 proyecto1122 us-central1 
+_./start CREATE (archivo-del-proyecto1122 proyecto1122 us-central1)_
 
-Para destruir cluster 
+**Para destruir cluster 
 
-./start DESTROY 
+_./start DESTROY_
 
 Para ver su salida 
 
-./start OUTPUT http://Ip_del_Cluster  (tendra una salida "Hello World")
+_./start OUTPUT http://Ip-del-Cluster_  (tendra una salida "Hello World")
 
-./start OUTPUT http://Ip_del_Cluster/square/2 (tendrá como resultado el cuadrado del numero 2)
+_./start OUTPUT http://Ip-del-Cluster/square/2_ (tendrá como resultado el cuadrado del numero 2)
 
-./start OUTPUT http://Ip_del_Cluster/greetings (tendrá hello World + Hostname) 
+_./start OUTPUT http://Ip-del-Cluster/greetings_ (tendrá hello World + Hostname) 
 
 ## Configuración
 
