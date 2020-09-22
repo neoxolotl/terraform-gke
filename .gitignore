@@ -1,0 +1,4 @@
+*terraform 
+*.json
+variables.tf 
+provider.tf

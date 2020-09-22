@@ -1,0 +1,84 @@
+#!/bin/bash
+# Crear un script bash o makefile, que acepte parámetros (CREATE, DESTROY y OUTPUT) con los siguientes pasos:
+# Load the user defined parameters
+#CREATE
+#DESTROY 
+#OUTPUT 
+###############
+while [[ $# > 0 ]]
+do
+       case "$1" in
+                CREATE)
+                #./start CREATE credentials.json project_id region_
+                        echo "CREATE"
+                                echo "Crear provider"
+echo '
+provider "google" {
+  credentials = "${file("'$2'")}"
+  project = "'$3'"
+  region = "'$4'"
+}' > provider.tf 
+
+echo '		
+variable "name" {
+  default = "demo-cluster"
+}
+variable "project" {
+  default = "'$3'"
+}
+variable "location" {
+  default = "'$4'"
+}
+variable "initial_node_count" {
+  default = 1
+}
+variable "machine_type" {
+  default = "n1-standard-1"
+}
+' > variables.tf
+
+
+                                
+			shift 
+                        ;;
+                DESTROY)
+                       echo "Destroy"
+			shift
+                       ;;
+                OUTPUT)
+                        echo "Output"
+			shift
+                        ;;
+                *|-help) 
+                        echo "
+Error : Enter valid params  
+-------
+	You must select any params (Create,Destroy,Output) 
+Create (create cluster)
+        For make a cluster in Kubernetes. This cluster have services and ingress controller 
+
+
+Destroy (destroy cluster)
+        For destroy all the cluster 
+
+Output (output )
+        You can show the api contents 
+        curl http://ip  (for hello World )
+        curl http://ip/square/2 (for square 2 )
+
+Examples: 
+
+./start Create  
+
+"
+						shift
+                        ;;
+        esac
+        shift
+
+done
+
+
+
+
+
