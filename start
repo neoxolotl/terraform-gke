@@ -18,7 +18,7 @@ provider "google" {
   project = "'$3'"
   region = "'$4'"
 }' > provider.tf 
-
+echo "Crear variables"
 echo '		
 variable "name" {
   default = "demo-cluster"
@@ -49,7 +49,7 @@ variable "machine_type" {
                         echo "Output"
 			shift
                         ;;
-                *|-help) 
+                -help) 
                         echo "
 Error : Entre un parametro valido  
 -------
@@ -64,6 +64,7 @@ CREATE (Crea cluster) Y además debe ir acompañado por los parametros credentia
         Ejemplos: 
                 ./start CREATE credenciales_proyecto3322.json proyecto3322 us-central1
                 ./start CREATE credentials.json proyecto11 us-west1-b
+                ./start CREATE core-catalyst-283702-30950e2a8fd2.json core-catalyst-283702 us-central1
 
 DESTROY (Destruye el cluster)
         Destruye el cluster con los parametros previamente cargados correspondientes a
