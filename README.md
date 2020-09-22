@@ -6,7 +6,7 @@ Crear un script bash o makefile, que acepte parámetros (CREATE, DESTROY y OUTPU
 
 - Terraform versión v0.12.26.
 - Cuenta en GCP.
-- Crear una cuenta de servicios y crear una clave del tipo JSON.
+- Crear una cuenta de servicios y crear una clave del tipo JSON. descargada y guardada en el proyecto
 
 ### Cuenta de Servicio 
 
@@ -19,13 +19,14 @@ Crear un script bash o makefile, que acepte parámetros (CREATE, DESTROY y OUTPU
 1. Descargue al raiz de este proyecto su archivo su archivo de clave JSON 
 2. Ejecute el script con los siguientes parametros 
 
-./start CREATE credentials project_id gcp_region
+./start CREATE `credentials` `project_id` `gcp_region`
 
-Ejemplos: 
+**Ejemplos:** 
 
-_Para crear cluster_ 
+Para crear cluster
 
 _./start CREATE (archivo-del-proyecto1122 proyecto1122 us-central1)_
+_./start CREATE core-catalyst-283702-30950e2a8fd2.json core-catalyst-283702 us-central1_
 
 **Para destruir cluster 
 
