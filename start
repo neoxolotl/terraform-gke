@@ -50,7 +50,7 @@ variable "machine_type" {
                        ;;
                 OUTPUT)
                         echo "Output"
-                        kubectl get all 
+                        curl "'$2':'$3'"
 			shift
                         ;;
                 -help) 
@@ -89,10 +89,6 @@ OUTPUT (Salida  )
         You can show the api contents 
         curl http://ip  (for hello World )
         curl http://ip/square/2 (for square 2 )
-
-Examples: 
-
-./start Create  
 
 "
 						shift
