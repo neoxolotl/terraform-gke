@@ -15,6 +15,7 @@ OUTPUT
 - Cuenta en GCP.
 - Crear una cuenta de servicios y crear una clave del tipo JSON. descargada y guardada en el proyecto
 - Herramientas kubectl 
+- gcloud 
 
 ### Cuenta de Servicio 
 
