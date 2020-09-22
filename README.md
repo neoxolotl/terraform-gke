@@ -41,6 +41,18 @@ _./start OUTPUT http://Ip-del-Cluster/square/2_ (tendrá como resultado el cuadr
 
 _./start OUTPUT http://Ip-del-Cluster/greetings_ (tendrá hello World + Hostname) 
 
+## IMPORTANTE:
+        Tenga presente los siguientes requerimientos. 
+- Terraform versión v0.12.26.
+- Cuenta en GCP.
+- Crear una cuenta de servicios y crear una clave del tipo JSON. descargada y guardada en el proyecto
+- Herramientas kubectl 
+
+        Puede instalarlos metiante los script:
+        sudo ./tf_Linux
+        ./tf_MacOS
+
+
 ## Configuración
 
 Los siguientes parámetros son los que se pueden usar en el flujo.

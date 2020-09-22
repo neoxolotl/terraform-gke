@@ -106,9 +106,8 @@ IMPORTANTE:
 - Herramientas kubectl 
 
         Puede instalarlos metiante los script:
-        ./tf_Linux
+        sudo ./tf_Linux
         ./tf_MacOS
-
 "
 						shift
                         ;;
