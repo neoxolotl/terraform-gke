@@ -4,4 +4,6 @@ variables.*
 provider.*
 *(copia).*
 *.bkp
+*.swp
+
 
