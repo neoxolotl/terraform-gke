@@ -1,6 +1,13 @@
 # terraform-gke
 
-Crear un script bash o makefile, que acepte parámetros (CREATE, DESTROY y OUTPUT) 
+Script acepta parametros (CREATE, DESTROY y OUTPUT) para  
+CREATE
+	crea el cluster con una minima aplicacion 
+DESTROY 
+	Destruye el Cluster 
+OUTPUT 
+	permite mostrar el contenido de la aplicacion. 
+	
 
 ## Requerimientos
 
