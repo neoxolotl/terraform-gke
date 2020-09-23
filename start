@@ -40,7 +40,7 @@ variable "machine_type" {
                 terraform plan 
                 terraform apply 
                 # get credentials for admin
-                gcloud container clusters get-credentials demo-cluster --zone='$4'
+                gcloud container clusters get-credentials demo-cluster --zone=$4
                 cd app 
                 kubectl apply -f deployment.yaml
                 kubectl apply -f 12service.yaml
