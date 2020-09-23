@@ -56,7 +56,7 @@ variable "machine_type" {
                        ;;
                 OUTPUT)
                         echo "OUTPUT"
-                        curl "'$2':'$3'"
+                        curl "http://"$2
 			shift
                         ;;
                 -help) 
