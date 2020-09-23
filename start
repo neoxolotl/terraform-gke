@@ -50,12 +50,12 @@ variable "machine_type" {
 			shift 
                         ;;
                 DESTROY)
-                       echo "Destroy"
+                       echo "DESTROY"
                         terraform destroy
 			shift
                        ;;
                 OUTPUT)
-                        echo "Output"
+                        echo "OUTPUT"
                         curl "'$2':'$3'"
 			shift
                         ;;
