@@ -38,7 +38,7 @@ variable "machine_type" {
 ' > variables.tf
                 terraform init 
                 terraform plan 
-                terraform apply 
+                terraform apply -auto-approve 
                 # get credentials for admin
                 gcloud container clusters get-credentials demo-cluster --zone=$4
                 cd app 
