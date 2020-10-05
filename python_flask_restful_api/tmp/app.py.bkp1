@@ -1,0 +1,29 @@
+# app.py - a minimal flask api using flask_restful
+from flask import Flask
+from flask_restful import Resource, Api
+
+app = Flask(__name__)
+api = Api(app)
+
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+class Greetings(Resource):
+    def get(self):
+        return {'hello world':'from greetings'}
+
+class Square(Resource):
+    def get(self)
+        return {'hello from square':'wsss'}
+
+
+#endpoints
+api.add_resource(HelloWorld, '/') 
+api.add_resource(Greetings, '/greetings')
+api.add_resource(Square, '/square')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

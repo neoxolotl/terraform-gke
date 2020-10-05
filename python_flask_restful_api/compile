@@ -1,0 +1,7 @@
+echo "-----------------------Building Image------------------------------ "
+docker build -t myapyrest:latest .
+docker run -d -p 5000:5000 myapyrest:latest
+docker ps 
+
+
+docker images -q --no-trunc -f dangling=true | xargs -r docker rmi
